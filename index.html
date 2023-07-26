@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./assets/style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>JavaScript Quiz</title>
+</head>
+<body>
+
+<header class="header title" id="header">
+    <div class="view high scores button">
+        <div class="style individual">
+            <button class="high-score" id="high-score" type="button">High Scores</button>
+        </div>
+        <div class="timer-style">
+            <p>Time Remaining:</p>
+            <p class="timer" id="timer">60</p>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="main title">
+        <h1>JavaScript Quiz</h1>
+    </div>
+
+    <section id="quizIntro">
+        <div class="main display" id="question-answer">
+            <p class="paragraph" id="intro">Answer the following code-related questions within the 60-second time limit.
+                <br>
+                <br>
+                <strong>Be careful!</strong> Incorrect answers will result in the loss of 10 seconds from the timer.
+                <br>
+                <br>
+                Your final score will be the time remaining.
+            </p>
+        </div>
+        <div class="start_button" id="start-button-container">
+            <button class="start-btn" id="startButton">Let's Begin!</button>
+        </div>
+    </section>
+
+    <!-- Questions and answers -->
+
+    <div id="quizContainer" class="hidden">
+        <section id="quiz">
+        </section>
+    </div>
+
+<!-- Results & scores section -->
+<section id="results" class="hidden">
+    <p>Your Final Score is: <span id="score"></span></p>
+    <div class="input-group">
+        <label for="playerName">Your Name:</label>
+        <input id="playerName" type="text" />
+        <button id="submit-player">Submit!</button>
+    </div>
+    <div id="highScoresList" class="hidden">
+        <h2>High Scores</h2>
+        <ul id="scoresList"></ul>
+    </div>
+</section>
+
+
+</main>
+
+<script src="assets/script.js"></script>
+</body>
+<footer></footer>
+</html>
